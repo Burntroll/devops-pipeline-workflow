@@ -9,8 +9,14 @@ jobs:
   execute_test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Prepare tests
         run: echo "Preparing tests..."
+      - name: List files in working directory
+        run: ls
+      - name: Set execute permission
+        run: chmod +x ./script.sh
       - name: Execute tests
         run: bash ./script.sh
       - name: Cleanup
