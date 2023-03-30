@@ -50,6 +50,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: execute_test
     steps:
-      - uses: github/codeql-action/init@v1
+      - uses: github/codeql-action/init@v2
       - name: Analyze code with CodeQL
-        uses: github/codeql-action/analyze@v1
+        uses: github/codeql-action/analyze@v2
